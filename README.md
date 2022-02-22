@@ -1,2 +1,3 @@
-# _
-The Underscore Programming Language
+# `_` - The Underscore Programming Language
+
+Underscore file extension: `._` and `.us`
