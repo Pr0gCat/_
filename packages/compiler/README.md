@@ -1,11 +1,19 @@
-# `compiler`
+# compiler
 
-> TODO: description
+This application was generated with [Nx](https://nx.dev).
 
-## Usage
+## Building
 
-```
-const compiler = require('compiler');
+Run `nx build compiler` to build the application.
 
-// TODO: DEMONSTRATE API
-```
+## Starting
+
+Run `nx start compiler` to start/run the application.
+
+
+
+## Running unit tests
+
+Run `nx test compiler` to execute the unit tests via [Jest](https://jestjs.io).
+
+

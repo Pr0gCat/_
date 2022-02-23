@@ -1,11 +1,19 @@
-# `core`
+# core
 
-> TODO: description
+This library was generated with [Nx](https://nx.dev).
 
-## Usage
 
-```
-const core = require('core');
 
-// TODO: DEMONSTRATE API
-```
+## Building
+
+Run `nx build core` to build the library.
+
+
+
+
+
+## Running unit tests
+
+Run `nx test core` to execute the unit tests via [Jest](https://jestjs.io).
+
+

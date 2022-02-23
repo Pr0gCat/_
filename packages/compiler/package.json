@@ -1,27 +1,5 @@
 {
-  "name": "compiler",
-  "version": "0.0.0",
-  "description": "The `_` programming language compiler",
-  "keywords": [],
-  "author": "ProgCat <progcat@protonmail.com>",
-  "license": "MIT",
-  "main": "lib/compiler.js",
-  "directories": {
-    "lib": "lib",
-    "test": "__tests__"
-  },
-  "files": [
-    "lib"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Pr0gCat/_.git"
-  },
-  "scripts": {
-    "test": "echo \"Error: run tests from root\" && exit 1"
-  },
-  "bugs": {
-    "url": "https://github.com/Pr0gCat/_/issues"
-  },
-  "homepage": "https://github.com/Pr0gCat/_#readme"
+  "name": "@underscore/compiler",
+  "version": "0.0.1",
+  "type": "commonjs"
 }
