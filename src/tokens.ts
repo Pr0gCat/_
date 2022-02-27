@@ -1,14 +1,3 @@
-export interface Token {
-    type: TokenID;
-    value?: string; // "content" of the token
-    text: string; // whole text of the token
-    readonly line: number;
-    readonly column: number;
-    readonly pos_start: number;
-    readonly pos_offset: number;
-    readonly length: number;
-}
-
 export enum TokenID {
     Unknown = '<unknown>',
     EndOfFile = '<eof>',
