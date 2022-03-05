@@ -82,6 +82,7 @@ You can access type's `metadata` like accessing normal member on the type. For e
 | `i16` | `int16_t` | Signed 16 bits integer |
 | `i32` | `int32_t` | Signed 32 bits integer |
 | `i64` | `int64_t` | Signed 64 bits integer |
+| `msize` | `` | Type of the pointer |
 
 #### Floatings
 
@@ -114,18 +115,90 @@ In `_`, characters are encoded in UTF-8 by default. Even the UTF-8 is ASCII comp
 
 #### Enumerates
 
-## Flow Control
-
-### `match`
+## Flow Control - `match`
 
 ```
 match something {
-    if > 0 {
+    0 => {
+        
+    }
+    > 0 => {
 
     }
-    if != a {
+    != a => {
 
     }
-    else
+    else => {} // must have else branch
 }
+```
+
+## Flow Control - Loops
+
+### for loop
+
+```
+for i in 0 to 10 {
+
+}
+
+let array = [1,2,3,4,5]
+for index, value in array {
+    // index: 0, 1, 2, 3, 4
+    // value: 1, 2, 3, 4, 5
+}
+```
+
+### while loop
+
+```
+let i = 0
+while i < 10 {
+    // do somthing
+    i++
+}
+```
+
+### do-while loop
+
+```
+let i = 0
+{
+    // i: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+    i++;
+} while i < 10
+```
+
+### Endless loop
+
+```
+loop {
+    // stuck here forever...
+}
+```
+
+## Custom loop
+
+Underscore provides different way to create loops to fulfill special needs, given the basic blocks. 
+User can construct much complex and efficent loops themselves.
+
+* Body: A code block `{}`, block to loop `loop {}`
+* Condition head: `for`, `while`, `match`
+* Flow indicator: `=>`
+
+### For loop equivalent
+
+```
+let i = 0 => {
+    // i = 0, 1, 2, 3, 4, 5, 6, 7, 8, 9
+} => while i < 10
+// i still exists, its 9.
+
+```
+
+### Do-while loop equivalent
+
+```
+loop {
+    // loop body
+} => while condition
 ```

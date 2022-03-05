@@ -6,6 +6,7 @@
   "types": "dist/index.d.ts",
   "bin": "dist/cli/index.js",
   "scripts": {
+    "build": "gulp",
     "test": "yarn jest",
     "test:dev": "yarn jest --watch",
     "lint": "eslint --ext .ts src/"
