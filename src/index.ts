@@ -1,4 +1,5 @@
 import semvar from 'semver';
+
 // Do a node version check
 if (!semvar.satisfies(process.version, '>=12.0.0')) {
     console.error(

@@ -1,8 +1,9 @@
 import * as moo from 'moo';
+import * as lodash from 'lodash';
 
 const lexer = moo.compile({
     NL: { match: /\n/, lineBreaks: true },
-    _WS: { match: /\s+/, lineBreaks: false },
+    _WS: { match: /\s+/, lineBreaks: true },
 
     Comment: { match: /\/\/.*/, lineBreaks: false },
     MDComment: {
@@ -144,14 +145,15 @@ const lexer = moo.compile({
     ]
 });
 
-// Skip whitespaces before passing to parser
-lexer.next = () => {
-    let tok;
-    while ((tok = lexer.next())) {
-        if (tok.type !== '_WS') {
-            return tok;
-        }
-    }
-};
-
-export default lexer;
+// Fake constructor, return a copy of the lexer
+export default function Lexer() {
+    const inst = lodash.cloneDeep(lexer);
+    // Skip whitespaces before passing to parser
+    inst.next = () => {
+        let tok;
+        // what a shameful hack to override a method
+        while ((tok = lexer.next.call(inst)) && tok.type == '_WS');
+        return tok;
+    };
+    return inst;
+}
