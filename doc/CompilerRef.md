@@ -11,5 +11,5 @@
 
 1. Read file content
 2. Construct AST and Symbol Table Fragment
-3. Spawn new workers for module imports
+3. Apply new task for module imports if we dont have it yet
 4. Return AST and Symbol Table Fragment
