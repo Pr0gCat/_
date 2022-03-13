@@ -146,14 +146,14 @@ const lexer = moo.compile({
 });
 
 // Fake constructor, return a copy of the lexer
-export default function Lexer() {
+export default () => {
     const inst = lodash.cloneDeep(lexer);
     // Skip whitespaces before passing to parser
     inst.next = () => {
         let tok;
-        // what a shameful hack to override a method
+        // what a shameful hack to call the original method
         while ((tok = lexer.next.call(inst)) && tok.type == '_WS');
         return tok;
     };
     return inst;
-}
+};
