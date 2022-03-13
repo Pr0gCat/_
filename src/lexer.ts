@@ -47,6 +47,7 @@ const lexer = moo.compile({
             Or: 'or',
             And: 'and',
             In: 'in',
+            To: 'to',
             Of: 'of',
             Typeof: 'typeof',
 

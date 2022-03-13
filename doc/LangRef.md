@@ -153,9 +153,10 @@ for index, value in array {
 ```
 let i = 0
 while i < 10 {
-    // do somthing
+    // i: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9
     i++
 }
+// i: 10
 ```
 
 ### do-while loop
@@ -166,6 +167,7 @@ let i = 0
     // i: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
     i++;
 } while i < 10
+// i: 11
 ```
 
 ### Endless loop
@@ -176,7 +178,7 @@ loop {
 }
 ```
 
-## Custom loop
+## Custom loop (Still designing)
 
 Underscore provides different way to create loops to fulfill special needs, given the basic blocks. 
 User can construct much complex and efficent loops themselves.
@@ -184,21 +186,3 @@ User can construct much complex and efficent loops themselves.
 * Body: A code block `{}`, block to loop `loop {}`
 * Condition head: `for`, `while`, `match`
 * Flow indicator: `=>`
-
-### For loop equivalent
-
-```
-let i = 0 => {
-    // i = 0, 1, 2, 3, 4, 5, 6, 7, 8, 9
-} => while i < 10
-// i still exists, its 9.
-
-```
-
-### Do-while loop equivalent
-
-```
-loop {
-    // loop body
-} => while condition
-```

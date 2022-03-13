@@ -17,9 +17,9 @@ Underscore had its own file types and conventions as shown below.
 |File Type|Extension|
 |-|-|
 | Source code | `._`, `.us` or just `.u`|
-| Markup | `.usml` |
+<!-- | Markup | `.usml` |
 | Object | `.uson` |
-| Binary Object | `.uso` |
+| Binary Object | `.uso` | -->
 
 ## Why `_`?
 
