@@ -46,6 +46,7 @@
     "del": "^6.0.0",
     "gradient-string": "^2.0.0",
     "listr": "^0.14.3",
+    "llvm-bindings": "^0.3.5",
     "lodash": "^4.17.21",
     "memfs": "^3.4.1",
     "moo": "^0.5.1",
