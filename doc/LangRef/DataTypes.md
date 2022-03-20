@@ -119,7 +119,10 @@ enum Foo {
     Bar, // 1
 }
 // Different type
-
+enum Result {
+    OK = 0,
+    Error(str),
+}
 ```
 
 **Define**
@@ -127,12 +130,19 @@ enum Foo {
 ```
 Foo bar = Foo.Foo
 // or 
-
+Result res = Result.Error("some error")
 ```
 
 **Access**
 
+```
+
+```
+
 **Metadata**
+
+|Field|Type|Desc.|
+|-|-|-|
 
 ---
 
